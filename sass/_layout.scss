@@ -1,0 +1,68 @@
+@import './placeholders';
+
+header{
+    @include flex-component(flex, column, center, normal);
+    .logo{
+        @extend %logo;
+        margin: 2%;
+    }
+    .localisation-container{
+        height: 7vh;
+        width: 100%;
+        background: $light-grey;
+        @include flex-component(flex, row, center, center);
+        box-shadow: inset 0px 10px 8px -13px;
+        .localisation{
+            @include flex-component(flex, row, inherit, space-between);
+            width: 37%;
+            margin-right: 7%;
+            color: $dark-grey;
+        }
+    }
+    .introduction{
+        text-align: center;
+        height: 45vh;
+        background-color: lighten($light-grey, 6%);
+        .introduction-content{
+            @include flex-component(flex, column, center, space-around);
+            height: 70%;
+            width: 90%;
+            margin:11% auto;
+            h2{
+                font-weight: bold;
+                width: 75%;
+            }
+            p{
+                font-weight: 100;
+                font-size: 1.1em;
+                color: $dark-grey;
+            }
+            a{
+                @extend %btn-links;
+                margin-top: 5%;
+            }
+        }
+    }
+}
+footer{
+    background: $dark-grey;
+    color: white;
+    padding:2% 7%;
+    h3{
+        @extend %logo;
+        line-height: 3;
+    }
+    .links{
+        padding-bottom: 10%;
+        .list-links {
+            line-height: 1.7;
+        }
+        i{
+            margin-right: 2%;
+            width: 1em;
+        }
+        a{
+            color: white;
+        }
+    }
+}

@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
     <title>OhMyFood that's tastcredible!</title>
 </head>
 <body>
     <header>
-        <h1>ohmyfood</h1>
+        <h1 class="logo">ohmyfood</h1>
         <div class="localisation-container">
             <div class="localisation">
-                <i class="fa fa-map-marker"></i>
+                <i class="fas fa-map-marker-alt"></i>
                 <span>Paris, Belleville</span>
             </div>
         </div>
         <div class="introduction">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a href="javascript.void(0)">Explorez nos restaurants</a>
+            <div class="introduction-content">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <a href="javascript.void(0)">Explorez nos restaurants</a>
+            </div>
         </div>
     </header>
     <main>
@@ -48,48 +51,48 @@
         </section>
         <section class="restaurant">
             <h2>Restaurants</h2>
-            <figure>
+            <figure class="card">
                 <a href="./menu-palette.html">
                     <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo restaurant la Palette du Goût">
                 </a>
                 <span>Nouveau</span>
-                <figcaption>
+                <figcaption class="card-legend">
                     <h3>La palette du goût
                         <i class="far fa-heart"></i>
                     </h3>
                     <p>Ménilmontant</p>
                 </figcaption>
             </figure>
-            <figure>
+            <figure class="card">
                 <a href="./menu-note.html">
                     <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo restaurant La Note Enchantée">
                 </a>
                 <span>Nouveau</span>
-                <figcaption>
+                <figcaption class="card-legend">
                     <h3>La note enchantée
                         <i class="far fa-heart"></i>
                     </h3>
                     <p>Charonne</p>
                 </figcaption>
             </figure>
-            <figure>
+            <figure class="card">
                 <a href="./menu-lafrancaise.html">
                     <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo restaurant À la française">
                 </a>
                 <span>Nouveau</span>
-                <figcaption>
+                <figcaption class="card-legend">
                     <h3>À la française
                         <i class="far fa-heart"></i>
                     </h3>
                     <p>Cité Rouge</p>
                 </figcaption>
             </figure>
-            <figure>
+            <figure class="card">
                 <a href="./menu-delice.html">
                     <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo restaurant Le délice des sens">
                 </a>
                 <span>Nouveau</span>
-                <figcaption>
+                <figcaption class="card-legend">
                     <h3>Le délice des sens
                         <i class="far fa-heart"></i>
                     </h3>
@@ -99,20 +102,20 @@
         </section>
     </main>
     <footer>
-        <h4>ohmyfood</h4>
-        <ul>
-            <li>
-                <i class="fas fa-utensils"></i>
+        <h3 class="logo">ohmyfood</h3>
+        <ul class="links">
+            <li class="list-links">
+                <i class="fas fa-utensils fa-xs"></i>
                 Proposer un restaurant
             </li>
-            <li>
-                <i class="fas fa-hands-helping"></i>
+            <li class="list-links">
+                <i class="fas fa-hands-helping fa-xs"></i>
                 Devenir partenaire
             </li>
-            <li>
+            <li class="list-links">
                 <a href="">Mentions Légales</a>
             </li>
-            <li>
+            <li class="list-links">
                 <a href="mailto:ohmyfood-contact@mail.com">Contact</a>
             </li>
         </ul>
