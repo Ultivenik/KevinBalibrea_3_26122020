@@ -1,40 +1,57 @@
 @import './placeholders';
+@import './variables.scss';
+
+// Style des element qui ne changeront pas à travers les pages
 
 header{
-    @include flex-component(flex, column, center, normal);
+    @include display-component(flex, column, center, normal);
+    .arrow-title{
+        @include display-component(flex, row, baseline, center);
+        width: 90%;
+        margin: 0 auto;
+        i{
+            color: $dark-grey;
+        }
+    }
     .logo{
         @extend %logo;
-        margin: 2%;
+        margin: 2% 20%;
     }
     .localisation-container{
-        height: 7vh;
-        width: 100%;
+        @include adaptative-HW(13vmin, 100%);
         background: $light-grey;
-        @include flex-component(flex, row, center, center);
         box-shadow: inset 0px 10px 8px -13px;
+        @include display-component(flex, row, center, center);
+        @include media-desktop{
+            height: 15vh;
+        }
         .localisation{
-            @include flex-component(flex, row, inherit, space-between);
-            width: 37%;
+            @include display-component(flex, row, inherit, space-between);
+            width: calc(1rem + 32vmin);
             margin-right: 7%;
             color: $dark-grey;
+            @include media-desktop{
+                margin: 0;
+            }
         }
     }
     .introduction{
         text-align: center;
-        height: 45vh;
-        background-color: lighten($light-grey, 6%);
+        background-color: lighten($light-grey, 5%);
+        @include adaptative-HW(77vmin, 100%);
         .introduction-content{
-            @include flex-component(flex, column, center, space-around);
-            height: 70%;
-            width: 90%;
-            margin:11% auto;
+            margin:11vmin auto;
+            @include display-component(flex, column, center, space-around);
+            @include adaptative-HW(70%, 90%);
+            @include media-desktop{
+                margin: 3% auto;
+            }
             h2{
                 font-weight: bold;
                 width: 75%;
             }
             p{
                 font-weight: 100;
-                font-size: 1.1em;
                 color: $dark-grey;
             }
             a{
@@ -48,14 +65,31 @@ footer{
     background: $dark-grey;
     color: white;
     padding:2% 7%;
+    @include media-tablet{
+        padding: 0;
+        @include display-component(flex, column, center, center)
+    }
     h3{
         @extend %logo;
         line-height: 3;
+        @include media-desktop{
+            line-height: 10;
+        }
     }
     .links{
         padding-bottom: 10%;
+        @include media-tablet{
+            padding-bottom: 3%;
+            width: 100%;
+            @include display-component(flex,row, baseline, center)
+        }
         .list-links {
             line-height: 1.7;
+            @include media-tablet{
+                width: 20%;
+                text-align: center;
+                font-size: .7em;
+            }
         }
         i{
             margin-right: 2%;

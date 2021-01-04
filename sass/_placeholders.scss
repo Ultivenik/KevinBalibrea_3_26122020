@@ -1,11 +1,18 @@
 %logo{
     font-family:$font-logo;
 }
+%hover{
+    opacity: .3;
+}
 %btn-links{
     background-image: linear-gradient($color-secondary, $color-primary);
     border-radius: 30px;
     color: white;
-    padding: 5% 6%;
+    padding: 4vmin 6vmin;
     box-shadow: 2px 2px 8px -2px lighten($dark-grey, 15%);
     display: block;
+    transition: opacity .3s ease-in-out;
+    &:hover{
+        opacity: .7;
+    }
 }

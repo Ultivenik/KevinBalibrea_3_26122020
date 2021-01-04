@@ -1,0 +1,188 @@
+.summary{
+    padding: 10% 5%;
+    .step-container{
+        padding-top: 10%;
+        margin: 0 auto;
+        width: 95%;
+    }
+    .step{
+        background-color: lighten($light-grey, 5%);
+        font-weight: 500;
+        height: 20vmin;
+        position: relative;
+        border-radius: 20px;
+        box-shadow: 6px 6px 20px -14px $dark-grey;
+        transition: all .5s ease-out;
+        margin-bottom: 3vh;
+        @include display-component(flex,row,center,left);
+        &:hover{
+            background-color: #f5edff;
+            transform: scale(1.1);
+            color: $color-primary;
+            box-shadow: 14px 14px 20px -14px $dark-grey;
+            i{
+                color: $color-primary;
+            }
+        }
+        .number-span{
+            margin-right: 20%;
+            color: white;
+            position: relative;
+            z-index: 1;
+            &::after{
+                content:"";
+                background: $color-primary;
+                @include adaptative-HW(7vmin, 7vmin);
+                position: absolute;
+                border-radius: 50%;
+                z-index: -1;
+                left: -2.2vmin;
+                top: -1vmin;
+            }
+        }
+        i{
+            position: absolute;
+            left: 11%;
+            color: lighten($dark-grey, 30%);
+            transition: all .5s ease-out;
+        }
+    }
+}
+.restaurant{
+    background-color: lighten($light-grey, 5%);
+    padding: 10% 5%;
+    .card{
+        position: relative;
+        margin: 10% auto;
+        @include adaptative-HW(70vmin, 90vmin);
+        background: #fff;
+        box-shadow: 6px 6px 20px -14px $dark-grey;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        a{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+        }
+        img{
+            @include adaptative-HW(71%, 90vmin);
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            object-position: 100% 61%;
+        }
+        span{
+            background: $color-third;
+            position: absolute;
+            color: darken($color-third, 40%);
+            z-index: 1000;
+            right: 3vmin;
+            top:3vmin;
+            padding: 0.4em .7em;
+            font-size: .9em;
+            font-weight: bold;
+        }
+    }
+    .card-legend{
+        position: absolute;
+        top: 54vmin;
+        left: 5vmin;
+        h3{
+            font-weight: bold;
+        }
+        i{
+            position: absolute;
+            left: 70vmin;
+            top:2vmin;
+            font-size: 1.6em;
+        }
+    }
+}
+
+.header-menu-img{
+    img{
+        width: 100%;
+    }
+}
+.restaurants{
+    background-color: lighten($light-grey, 5%);
+}
+.menu{
+    background-color: lighten($light-grey, 5%);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+    bottom: 14vmin;
+    h2{
+        font-family: $font-logo;
+        display: inline-block;
+        margin-right: 13vmin;
+        font-weight: normal
+    }
+    a{
+        @extend %btn-links;
+        text-align: center;
+        width: 40%;
+        margin: auto;
+        position: relative;
+        top:10vmin;
+    }
+    i{
+        font-size: 1.6em;
+    }
+    .menu-title{
+        font-size: 1em;
+        font-weight: 200;
+        text-transform: uppercase;
+        padding: 7% 0 5% 0;
+        &::after{
+            content: "";
+            height: 3px;
+            background: $color-third;
+            width: 11vmin;
+            display: block;
+        }
+    }
+    .menu-item{
+        background: #fff;
+        border-radius: 15px;
+        position: relative;
+        margin: 4vmin auto;
+        padding: 5% 3%;
+        overflow: hidden;
+        text-overflow: "...";
+        white-space: nowrap;
+        box-shadow: 6px 6px 20px -14px $dark-grey;
+        &:hover{
+            &::before{
+                content: "";
+                transition: all 1s ease-in-out;
+                background: $color-third;
+                display: block;
+                height: 100%;
+                position: absolute;
+                width: 25%;
+                transform: translateX(0%);
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+    .plates{
+        font-weight: bold;
+        line-height: 2;
+    }
+    .ingredient{
+        font-weight: 200;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: "...";
+        white-space: nowrap;
+        width: 87%;
+    }
+    .price{
+        font-weight: bold;
+        margin-right: auto;
+    }
+}

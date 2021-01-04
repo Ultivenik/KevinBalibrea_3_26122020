@@ -12,5 +12,8 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-size: $font-size;
+    font-size: $adaptative-font-size;
+}
+h2{
+    font-weight: bold;
 }

@@ -3,37 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>À la française</title>
 </head>
 <body>
     <header>
-        <i class="fas fa-arrow-left"></i>
-        <h1 class="logo">ohmyfood</h1>
-        <div class="localisation-container">
-            <div class="localisation">
-                <i class="fa fa-map-marker"></i>
-                <span>Paris, Belleville</span>
-            </div>
+        <div class="arrow-title">
+            <a href="index.html">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1 class="logo">ohmyfood</h1>
         </div>
-        <div class="introduction">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a href="javascript.void(0)">Explorez nos restaurants</a>
+        <div class="header-menu-img">
+            <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="image header restaurant a la francaise">
         </div>
     </header>
-    <main>
-        
+    <main class="restaurants">
+        <section class="menu summary">
+            <h2>À la française</h2>
+            <i class="far fa-heart"></i>
+            <ul class="menu-list">
+                <li class="menu-title">
+                    Entrées
+                </li>
+                <li class="menu-item">
+                    <p class="plates">Tartare de poulpe acidulé</p>
+                    <p class="ingredient">Aux zestes d'orange</p>
+                    <span class="price">25€</span>
+                </li>
+                <li class="menu-item">
+                    <p class="plates">Velouté de légumes d'antan</p>
+                    <p class="ingredient">Carotte, panais, topinambour</p>
+                    <span class="price">35€</span>
+                </li>
+                <li class="menu-item">
+                    <p class="plates">Soupe à l'oignon</p>
+                    <p class="ingredient">Revisitée</p>
+                    <span class="price">20€</span>
+                </li>
+            </ul>
+            <ul class="menu-list">
+                <li class="menu-title">
+                    Plats
+                </li>
+                <li class="menu-item">
+                    <p class="plates">Coquilles Saint-Jacques</p>
+                    <p class="ingredient">Accompagnées d'une purée de panais</p>
+                    <span class="price">40€</span>
+                </li>
+                <li class="menu-item">
+                    <p class="plates">Magret de canard</p>
+                    <p class="ingredient">Et parmentier de pommes de terre</p>
+                    <span class="price">35€</span>
+                </li>
+                <li class="menu-item">
+                    <p class="plates">Pigeonneau d’Ille-et-Vilaine</p>
+                    <p class="ingredient">Sur son lit de gnocchis aux légumes</p>
+                    <span class="price">44€</span>
+                </li>
+            </ul>
+            <ul class="menu-list">
+                <li class="menu-title">
+                    Desserts
+                </li>
+                <li class="menu-item">
+                    <p class="plates">Pétales de violettes glacés</p>
+                    <p class="ingredient">Et purée de noisettes</p>
+                    <span class="price">18€</span>
+                </li>
+            </ul>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <p class="plates">Fondant au chocolat</p>
+                    <p class="ingredient">Revisité</p>
+                    <span class="price">22€</span>
+                </li>
+                <li class="menu-item">
+                    <p class="plates">Millefeuille croustillant</p>
+                    <p class="ingredient">Myrtilles et pâte d’amande</p>
+                    <span class="price">23€</span>
+                </li>
+            </ul>
+            <a href="javascript:void(0)">Commander</a>
+        </section>
     </main>
     <footer>
-        <h4 class="logo">ohmyfood</h4>
+        <h3 class="logo">ohmyfood</h3>
         <ul class="links">
             <li class="list-links">
-                <i class="fas fa-utensils"></i>
+                <i class="fas fa-utensils fa-xs"></i>
                 Proposer un restaurant
             </li>
             <li class="list-links">
-                <i class="fas fa-hands-helping"></i>
+                <i class="fas fa-hands-helping fa-xs"></i>
                 Devenir partenaire
             </li>
             <li class="list-links">
