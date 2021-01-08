@@ -3,6 +3,11 @@
     @include media-tablet{
         padding: 3% 5%  0;
     }
+    h2{
+        @include media-desktop{
+            font-size: .9em;
+        }
+    }
     .step-container{
         padding-top: 10%;
         margin: 0 auto;
@@ -12,6 +17,9 @@
             flex-wrap: wrap;
             padding-top: 5%;
             margin: 0;
+        }
+        @include media-desktop{
+            padding-top: 2%;
         }
     }
     .step{
@@ -87,6 +95,9 @@
     h2{
         @include media-tablet{
             width: 100%;
+        }
+        @include media-desktop{
+            font-size: .9em;
         }
     }
     .card{

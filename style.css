@@ -96,7 +96,7 @@ header .localisation-container {
 }
 @media screen and (min-width: 1050px) {
   header .localisation-container {
-    height: 15vh;
+    height: 10vmin;
   }
 }
 header .localisation-container .localisation {
@@ -111,6 +111,8 @@ header .localisation-container .localisation {
 @media screen and (min-width: 1050px) {
   header .localisation-container .localisation {
     margin: 0;
+    font-size: 0.7em;
+    width: 25vmin;
   }
 }
 header .introduction {
@@ -137,6 +139,11 @@ header .introduction .introduction-content {
   header .introduction .introduction-content {
     margin: 4vmin auto;
     height: 45vmin;
+  }
+}
+@media screen and (min-width: 1050px) {
+  header .introduction .introduction-content {
+    font-size: 0.9em;
   }
 }
 header .introduction .introduction-content h2 {
@@ -224,6 +231,11 @@ footer .links a {
     padding: 3% 5% 0;
   }
 }
+@media screen and (min-width: 1050px) {
+  .summary h2 {
+    font-size: 0.9em;
+  }
+}
 .summary .step-container {
   padding-top: 10%;
   margin: 0 auto;
@@ -238,6 +250,11 @@ footer .links a {
     flex-wrap: wrap;
     padding-top: 5%;
     margin: 0;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .summary .step-container {
+    padding-top: 2%;
   }
 }
 .summary .step {
@@ -331,6 +348,11 @@ footer .links a {
 @media screen and (min-width: 650px) {
   .restaurant h2 {
     width: 100%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .restaurant h2 {
+    font-size: 0.9em;
   }
 }
 .restaurant .card {

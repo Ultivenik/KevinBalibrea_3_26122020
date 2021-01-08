@@ -38,7 +38,7 @@ header{
         box-shadow: inset 0px 10px 8px -13px;
         @include display-component(flex, row, center, center);
         @include media-desktop{
-            height: 15vh;
+            height: 10vmin;
         }
         .localisation{
             @include display-component(flex, row, inherit, space-between);
@@ -47,6 +47,8 @@ header{
             color: $dark-grey;
             @include media-desktop{
                 margin: 0;
+                font-size: .7em;
+                width: 25vmin;
             }
         }
     }
@@ -64,6 +66,9 @@ header{
             @include media-tablet{
                 margin: 4vmin auto;
                 height: 45vmin;
+            }
+            @include media-desktop{
+                font-size: .9em;
             }
             h2{
                 font-weight: bold;
