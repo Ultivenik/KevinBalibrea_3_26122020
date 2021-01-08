@@ -2,12 +2,26 @@
 @import './variables.scss';
 
 // Style des element qui ne changeront pas à travers les pages
-
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: linear-gradient($color-primary, $color-third);
+    z-index: 10000;
+    @include display-component(flex, inherit, center, center);
+    animation: loader 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) 2s 1 both;
+    i{
+        color: white;
+        font-size:8em;
+        animation: spinner 800s cubic-bezier(0.785, 0.135, 0.15, 0.86) .5s infinite normal;
+    }
+}
 header{
     @include display-component(flex, column, center, normal);
     .arrow-title{
-        @include display-component(flex, row, baseline, center);
-        width: 90%;
+        @include display-component(flex, row, center, center);
+        width: 100%;
+        background: #fff;
         margin: 0 auto;
         i{
             color: $dark-grey;
@@ -98,5 +112,16 @@ footer{
         a{
             color: white;
         }
+    }
+}
+@keyframes loader{
+    100%{
+        opacity: 0;
+        z-index: -100;
+    }
+}
+@keyframes spinner{
+    100%{
+        transform: rotate(360deg);
     }
 }

@@ -1,5 +1,5 @@
 .summary{
-    padding: 10% 5%;
+    padding: 8% 5%;
     .step-container{
         padding-top: 10%;
         margin: 0 auto;
@@ -81,7 +81,6 @@
             top:3vmin;
             padding: 0.4em .7em;
             font-size: .9em;
-            font-weight: bold;
         }
     }
     .card-legend{
@@ -96,13 +95,24 @@
             left: 70vmin;
             top:2vmin;
             font-size: 1.6em;
+            z-index: 100;
+            cursor: pointer;
+            &:hover{
+                color:$color-primary;
+                font-weight: 900;
+            }
         }
     }
 }
-
 .header-menu-img{
+    height: 75vmin;
+    object-position: top;
     img{
         width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 62vmin;
+        z-index: -1;
     }
 }
 .restaurants{
@@ -113,12 +123,13 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     position: relative;
-    bottom: 14vmin;
+    bottom: 16vmin;
     h2{
         font-family: $font-logo;
         display: inline-block;
-        margin-right: 13vmin;
-        font-weight: normal
+        margin-right: 7vmin;
+        font-weight: normal;
+        font-size: 1.75em;
     }
     a{
         @extend %btn-links;
@@ -130,6 +141,7 @@
     }
     i{
         font-size: 1.6em;
+        cursor: pointer;
     }
     .menu-title{
         font-size: 1em;
@@ -144,45 +156,71 @@
             display: block;
         }
     }
+    @for $i from 1 through 9 {
+        .menu-list .anime-item-#{$i}{
+            animation-delay: ($i * .1s);
+        }
+    }
     .menu-item{
         background: #fff;
+        @include display-component(flex, unset, initial, space-between);
+        transform: scale(0);
+        animation: apparition .5s ease 1s 1 normal forwards;
         border-radius: 15px;
-        position: relative;
         margin: 4vmin auto;
-        padding: 5% 3%;
+        cursor: pointer;
         overflow: hidden;
-        text-overflow: "...";
-        white-space: nowrap;
         box-shadow: 6px 6px 20px -14px $dark-grey;
+        .check{
+            @include display-component(flex, unset, center, center);
+            transform: translateX(100%);
+            background: $color-third;
+            color: white;
+            border-bottom-right-radius: 15px;
+            border-top-right-radius: 15px;
+            transition: all .3s ease-out;
+            padding: 1px;
+        }
         &:hover{
-            &::before{
-                content: "";
-                transition: all 1s ease-in-out;
-                background: $color-third;
-                display: block;
-                height: 100%;
-                position: absolute;
-                width: 25%;
-                transform: translateX(0%);
-                top: 0;
-                right: 0;
+            .check{
+                width: 30%;
+                transform: translateX(0);
+                i{
+                    transform: rotate(3turn);
+                    transition: all .7s ease;
+                }
             }
+        }
+        .item-header{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 1em 0 1em 1em;
+            width: 83%;
         }
     }
     .plates{
         font-weight: bold;
-        line-height: 2;
+        width: 100%;
+        margin-bottom: 1vmin;
+        font-size: 1.1em;
     }
     .ingredient{
         font-weight: 200;
-        display: inline-block;
-        overflow: hidden;
-        text-overflow: "...";
-        white-space: nowrap;
-        width: 87%;
+        margin-right: auto;
     }
     .price{
         font-weight: bold;
-        margin-right: auto;
+        align-self: end;
+        margin: 0 15px;
+        padding-bottom: 1em;
+    }
+}
+@keyframes apparition{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
     }
 }
