@@ -31,10 +31,29 @@ footer h3, header .logo {
   padding: 4vmin 6vmin;
   box-shadow: 2px 2px 8px -2px #5b5b5b;
   display: block;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .menu a:hover, header .introduction .introduction-content a:hover {
   opacity: 0.7;
+  box-shadow: 10px 12px 10px -2px #5b5b5b;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(#9356DC, #99E2D0);
+  z-index: 10000;
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+  justify-content: center;
+  animation: loader 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) 2s 1 both;
+}
+.overlay i {
+  color: white;
+  font-size: 8em;
+  animation: spinner 800s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s infinite normal;
 }
 
 header {
@@ -46,9 +65,10 @@ header {
 header .arrow-title {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
+  background: #fff;
   margin: 0 auto;
 }
 header .arrow-title i {
@@ -171,8 +191,19 @@ footer .links a {
   color: white;
 }
 
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -100;
+  }
+}
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .summary {
-  padding: 10% 5%;
+  padding: 8% 5%;
 }
 .summary .step-container {
   padding-top: 10%;
@@ -263,7 +294,6 @@ footer .links a {
   top: 3vmin;
   padding: 0.4em 0.7em;
   font-size: 0.9em;
-  font-weight: bold;
 }
 .restaurant .card-legend {
   position: absolute;
@@ -278,10 +308,24 @@ footer .links a {
   left: 70vmin;
   top: 2vmin;
   font-size: 1.6em;
+  z-index: 100;
+  cursor: pointer;
+}
+.restaurant .card-legend i:hover {
+  color: #9356DC;
+  font-weight: 900;
 }
 
+.header-menu-img {
+  height: 75vmin;
+  object-position: top;
+}
 .header-menu-img img {
   width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 62vmin;
+  z-index: -1;
 }
 
 .restaurants {
@@ -293,13 +337,14 @@ footer .links a {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   position: relative;
-  bottom: 14vmin;
+  bottom: 16vmin;
 }
 .menu h2 {
   font-family: "Shrikhand", cursive;
   display: inline-block;
-  margin-right: 13vmin;
+  margin-right: 7vmin;
   font-weight: normal;
+  font-size: 1.75em;
 }
 .menu a {
   text-align: center;
@@ -310,6 +355,7 @@ footer .links a {
 }
 .menu i {
   font-size: 1.6em;
+  cursor: pointer;
 }
 .menu .menu-title {
   font-size: 1em;
@@ -324,46 +370,100 @@ footer .links a {
   width: 11vmin;
   display: block;
 }
+.menu .menu-list .anime-item-1 {
+  animation-delay: 0.1s;
+}
+.menu .menu-list .anime-item-2 {
+  animation-delay: 0.2s;
+}
+.menu .menu-list .anime-item-3 {
+  animation-delay: 0.3s;
+}
+.menu .menu-list .anime-item-4 {
+  animation-delay: 0.4s;
+}
+.menu .menu-list .anime-item-5 {
+  animation-delay: 0.5s;
+}
+.menu .menu-list .anime-item-6 {
+  animation-delay: 0.6s;
+}
+.menu .menu-list .anime-item-7 {
+  animation-delay: 0.7s;
+}
+.menu .menu-list .anime-item-8 {
+  animation-delay: 0.8s;
+}
+.menu .menu-list .anime-item-9 {
+  animation-delay: 0.9s;
+}
 .menu .menu-item {
   background: #fff;
+  display: flex;
+  flex-direction: unset;
+  align-items: initial;
+  justify-content: space-between;
+  transform: scale(0);
+  animation: apparition 0.5s ease 1s 1 normal forwards;
   border-radius: 15px;
-  position: relative;
   margin: 4vmin auto;
-  padding: 5% 3%;
+  cursor: pointer;
   overflow: hidden;
-  text-overflow: "...";
-  white-space: nowrap;
   box-shadow: 6px 6px 20px -14px #353535;
 }
-.menu .menu-item:hover::before {
-  content: "";
-  transition: all 1s ease-in-out;
+.menu .menu-item .check {
+  display: flex;
+  flex-direction: unset;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
   background: #99E2D0;
-  display: block;
-  height: 100%;
-  position: absolute;
-  width: 25%;
-  transform: translateX(0%);
-  top: 0;
-  right: 0;
+  color: white;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: all 0.3s ease-out;
+  padding: 1px;
+}
+.menu .menu-item:hover .check {
+  width: 30%;
+  transform: translateX(0);
+}
+.menu .menu-item:hover .check i {
+  transform: rotate(3turn);
+  transition: all 0.7s ease;
+}
+.menu .menu-item .item-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 1em 0 1em 1em;
+  width: 83%;
 }
 .menu .plates {
   font-weight: bold;
-  line-height: 2;
+  width: 100%;
+  margin-bottom: 1vmin;
+  font-size: 1.1em;
 }
 .menu .ingredient {
   font-weight: 200;
-  display: inline-block;
-  overflow: hidden;
-  text-overflow: "...";
-  white-space: nowrap;
-  width: 87%;
+  margin-right: auto;
 }
 .menu .price {
   font-weight: bold;
-  margin-right: auto;
+  align-self: end;
+  margin: 0 15px;
+  padding-bottom: 1em;
 }
 
+@keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 header .logo, footer h3 {
   font-family: "Shrikhand", cursive;
 }
@@ -375,10 +475,11 @@ header .introduction .introduction-content a, .menu a {
   padding: 4vmin 6vmin;
   box-shadow: 2px 2px 8px -2px #5b5b5b;
   display: block;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 header .introduction .introduction-content a:hover, .menu a:hover {
   opacity: 0.7;
+  box-shadow: 10px 12px 10px -2px #5b5b5b;
 }
 
 /*# sourceMappingURL=style.css.map */
