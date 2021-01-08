@@ -1,9 +1,18 @@
 .summary{
     padding: 8% 5%;
+    @include media-tablet{
+        padding: 3% 5%  0;
+    }
     .step-container{
         padding-top: 10%;
         margin: 0 auto;
         width: 95%;
+        @include media-tablet{
+            @include display-component(flex, row, unset, space-between);
+            flex-wrap: wrap;
+            padding-top: 5%;
+            margin: 0;
+        }
     }
     .step{
         background-color: lighten($light-grey, 5%);
@@ -14,7 +23,17 @@
         box-shadow: 6px 6px 20px -14px $dark-grey;
         transition: all .5s ease-out;
         margin-bottom: 3vh;
+        padding-left: 22vmin;
         @include display-component(flex,row,center,left);
+        @include media-tablet{
+            @include adaptative-HW(9vmin, 30%);
+            font-size: .6em;
+            padding-left: 10vmin;
+        }
+        @include media-desktop{
+            padding-left: 6%;
+            width: 20%;
+        }
         &:hover{
             background-color: #f5edff;
             transform: scale(1.1);
@@ -27,17 +46,27 @@
         .number-span{
             margin-right: 20%;
             color: white;
-            position: relative;
+            position: absolute;
+            right: 67vmin;
             z-index: 1;
+            @include media-tablet{
+                right: 28vmin;
+            }
+            @include media-desktop{
+                left: 0;
+            }
             &::after{
                 content:"";
                 background: $color-primary;
-                @include adaptative-HW(7vmin, 7vmin);
+                @include adaptative-HW(1.5em, 1.5em);
                 position: absolute;
                 border-radius: 50%;
                 z-index: -1;
-                left: -2.2vmin;
-                top: -1vmin;
+                left:-2vmin;
+                top: -.5vmin;
+                @include media-tablet{
+                    left: -1vmin;
+                }
             }
         }
         i{
@@ -51,6 +80,15 @@
 .restaurant{
     background-color: lighten($light-grey, 5%);
     padding: 10% 5%;
+    @include media-tablet{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    h2{
+        @include media-tablet{
+            width: 100%;
+        }
+    }
     .card{
         position: relative;
         margin: 10% auto;
@@ -59,6 +97,10 @@
         box-shadow: 6px 6px 20px -14px $dark-grey;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
+        @include media-tablet{
+            @include adaptative-HW(40vmin, 48%);
+            margin: 2% auto;
+        }
         a{
             position: absolute;
             height: 100%;
@@ -66,7 +108,7 @@
             z-index: 100;
         }
         img{
-            @include adaptative-HW(71%, 90vmin);
+            @include adaptative-HW(71%, 100%);
             object-fit: cover;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
@@ -81,12 +123,19 @@
             top:3vmin;
             padding: 0.4em .7em;
             font-size: .9em;
+            @include media-tablet{
+                font-size: .6em;
+            }
         }
     }
     .card-legend{
         position: absolute;
         top: 54vmin;
         left: 5vmin;
+        @include media-tablet{
+            top: 30vmin;
+            font-size: .7em;
+        }
         h3{
             font-weight: bold;
         }
@@ -97,6 +146,14 @@
             font-size: 1.6em;
             z-index: 100;
             cursor: pointer;
+            @include media-tablet{
+                left: 30vmin;
+                top: 0;
+            }
+            @include media-desktop{
+                // left: 55vmin;
+                right: 0;
+            }
             &:hover{
                 color:$color-primary;
                 font-weight: 900;
@@ -106,17 +163,31 @@
 }
 .header-menu-img{
     height: 75vmin;
-    object-position: top;
-    img{
-        width: 100%;
+    @include media-desktop{
+        height: 55vmin;
+    }
+    .img-note-enchantee{
         position: absolute;
         left: 0;
         bottom: 62vmin;
         z-index: -1;
     }
+    img{
+        width: 100%;
+        @include media-desktop{
+            position: absolute;
+            left: 0;
+            bottom: 3vmin;
+            z-index: -1;
+            // height: 100%;
+        }
+    }
 }
 .restaurants{
     background-color: lighten($light-grey, 5%);
+    @include media-desktop{
+        background-color: #fff;
+    }
 }
 .menu{
     background-color: lighten($light-grey, 5%);
@@ -124,12 +195,24 @@
     border-top-right-radius: 40px;
     position: relative;
     bottom: 16vmin;
+    @include media-desktop{
+        width: 85%;
+        margin: auto;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     h2{
         font-family: $font-logo;
         display: inline-block;
         margin-right: 7vmin;
         font-weight: normal;
         font-size: 1.75em;
+        @include media-desktop{
+            width: 80%;
+        }
     }
     a{
         @extend %btn-links;
@@ -138,6 +221,9 @@
         margin: auto;
         position: relative;
         top:10vmin;
+        @include media-desktop{
+            width: 50%;
+        }
     }
     i{
         font-size: 1.6em;
@@ -156,6 +242,11 @@
             display: block;
         }
     }
+    .menu-list{
+        @include media-desktop{
+            width: 30%;
+        }
+    }
     @for $i from 1 through 9 {
         .menu-list .anime-item-#{$i}{
             animation-delay: ($i * .1s);
@@ -171,6 +262,9 @@
         cursor: pointer;
         overflow: hidden;
         box-shadow: 6px 6px 20px -14px $dark-grey;
+        @include media-desktop{
+            font-size: .5em;
+        }
         .check{
             @include display-component(flex, unset, center, center);
             transform: translateX(100%);
@@ -183,7 +277,8 @@
         }
         &:hover{
             .check{
-                width: 30%;
+                width: 25%;
+                margin-left: 25px;
                 transform: translateX(0);
                 i{
                     transform: rotate(3turn);
@@ -193,7 +288,6 @@
         }
         .item-header{
             overflow: hidden;
-            text-overflow: ellipsis;
             white-space: nowrap;
             padding: 1em 0 1em 1em;
             width: 83%;
@@ -204,15 +298,19 @@
         width: 100%;
         margin-bottom: 1vmin;
         font-size: 1.1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .ingredient{
         font-weight: 200;
         margin-right: auto;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     .price{
         font-weight: bold;
         align-self: end;
-        margin: 0 15px;
         padding-bottom: 1em;
     }
 }

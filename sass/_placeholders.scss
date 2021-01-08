@@ -1,9 +1,6 @@
 %logo{
     font-family:$font-logo;
 }
-%hover{
-    opacity: .3;
-}
 %btn-links{
     background-image: linear-gradient($color-secondary, $color-primary);
     border-radius: 30px;
@@ -12,6 +9,10 @@
     box-shadow: 2px 2px 8px -2px lighten($dark-grey, 15%);
     display: block;
     transition: all .3s ease-in-out;
+    @include media-tablet{
+        padding: 2vmin 3vmin;
+        font-size: .7em;
+    }
     &:hover{
         opacity: .7;
         box-shadow: 10px 12px 10px -2px lighten($dark-grey, 15%);

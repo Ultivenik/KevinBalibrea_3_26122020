@@ -9,11 +9,12 @@
     background: linear-gradient($color-primary, $color-third);
     z-index: 10000;
     @include display-component(flex, inherit, center, center);
-    animation: loader 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) 2s 1 both;
+    animation: loader 0s cubic-bezier(0.445, 0.05, 0.55, 0.95) 2s 1 forwards;
+    display: none;
     i{
         color: white;
         font-size:8em;
-        animation: spinner 800s cubic-bezier(0.785, 0.135, 0.15, 0.86) .5s infinite normal;
+        animation: spinner 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s infinite none;
     }
 }
 header{
@@ -53,12 +54,16 @@ header{
         text-align: center;
         background-color: lighten($light-grey, 5%);
         @include adaptative-HW(77vmin, 100%);
+        @include media-tablet{
+            height: 55vmin;
+        }
         .introduction-content{
             margin:11vmin auto;
             @include display-component(flex, column, center, space-around);
             @include adaptative-HW(70%, 90%);
-            @include media-desktop{
-                margin: 3% auto;
+            @include media-tablet{
+                margin: 4vmin auto;
+                height: 45vmin;
             }
             h2{
                 font-weight: bold;
@@ -99,6 +104,7 @@ footer{
         }
         .list-links {
             line-height: 1.7;
+            cursor: pointer;
             @include media-tablet{
                 width: 20%;
                 text-align: center;
