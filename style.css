@@ -630,7 +630,6 @@ footer .links a {
 }
 .menu .price {
   font-weight: bold;
-  align-self: flex-end;
   padding-bottom: 1em;
 }
 
