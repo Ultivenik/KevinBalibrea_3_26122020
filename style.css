@@ -569,7 +569,7 @@ footer .links a {
   background: #fff;
   display: flex;
   flex-direction: unset;
-  align-items: initial;
+  align-items: flex-end;
   justify-content: space-between;
   transform: scale(0);
   animation: apparition 0.5s ease 1s 1 normal forwards;
@@ -578,7 +578,6 @@ footer .links a {
   cursor: pointer;
   overflow: hidden;
   box-shadow: 6px 6px 20px -14px #353535;
-  align-items: flex-end;
 }
 @media screen and (min-width: 1050px) {
   .menu .menu-item {

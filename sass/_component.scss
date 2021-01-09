@@ -264,7 +264,7 @@
     }
     .menu-item{
         background: #fff;
-        @include display-component(flex, unset, initial, space-between);
+        @include display-component(flex, unset, flex-end, space-between);
         transform: scale(0);
         animation: apparition .5s ease 1s 1 normal forwards;
         border-radius: 15px;
@@ -272,7 +272,6 @@
         cursor: pointer;
         overflow: hidden;
         box-shadow: 6px 6px 20px -14px $dark-grey;
-        align-items: flex-end;
         @include media-desktop{
             font-size: .5em;
         }
