@@ -635,10 +635,12 @@ footer .links a {
 
 @keyframes apparition {
   0% {
-    transform: scale(0);
+    opacity: 0;
+    transform: translateY(10%);
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 header .logo, footer h3 {
