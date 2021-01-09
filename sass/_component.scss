@@ -162,10 +162,10 @@
                 top: 0;
             }
             @include media-desktop{
-                // left: 55vmin;
                 right: 0;
             }
             &:hover{
+                transition: all .5s ease-in-out;
                 color:$color-primary;
                 font-weight: 900;
             }

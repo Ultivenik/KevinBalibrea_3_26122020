@@ -1,6 +1,5 @@
 @import './placeholders';
 @import './variables.scss';
-
 // Style des element qui ne changeront pas à travers les pages
 .overlay{
     height: 100%;
@@ -10,7 +9,6 @@
     z-index: 10000;
     @include display-component(flex, inherit, center, center);
     animation: loader 0s cubic-bezier(0.445, 0.05, 0.55, 0.95) 2s 1 forwards;
-    display: none;
     i{
         color: white;
         font-size:8em;
