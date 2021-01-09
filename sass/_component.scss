@@ -264,7 +264,7 @@
     }
     .menu-item{
         background: #fff;
-        @include display-component(flex, unset, flex-end, space-between);
+        @include display-component(flex, unset, initial, space-between);
         transform: scale(0);
         animation: apparition .5s ease 1s 1 normal forwards;
         border-radius: 15px;
@@ -321,6 +321,7 @@
     .price{
         font-weight: bold;
         padding-bottom: 1em;
+        align-self: flex-end;
     }
 }
 @keyframes apparition{

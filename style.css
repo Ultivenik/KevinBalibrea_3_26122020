@@ -569,7 +569,7 @@ footer .links a {
   background: #fff;
   display: flex;
   flex-direction: unset;
-  align-items: flex-end;
+  align-items: initial;
   justify-content: space-between;
   transform: scale(0);
   animation: apparition 0.5s ease 1s 1 normal forwards;
@@ -630,6 +630,7 @@ footer .links a {
 .menu .price {
   font-weight: bold;
   padding-bottom: 1em;
+  align-self: flex-end;
 }
 
 @keyframes apparition {
