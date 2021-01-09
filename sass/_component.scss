@@ -273,6 +273,7 @@
         cursor: pointer;
         overflow: hidden;
         box-shadow: 6px 6px 20px -14px $dark-grey;
+        align-items: flex-end;
         @include media-desktop{
             font-size: .5em;
         }
@@ -321,7 +322,7 @@
     }
     .price{
         font-weight: bold;
-        align-self: end;
+        align-self: flex-end;
         padding-bottom: 1em;
     }
 }
