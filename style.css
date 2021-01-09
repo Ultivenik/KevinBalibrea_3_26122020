@@ -603,7 +603,7 @@ footer .links a {
   transform: translateX(0);
 }
 .menu .menu-item:hover .check i {
-  transform: rotate(3turn);
+  transform: rotate(1turn);
   transition: all 0.7s ease;
 }
 .menu .menu-item .item-header {
