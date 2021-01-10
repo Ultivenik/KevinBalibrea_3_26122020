@@ -356,15 +356,12 @@ footer .links a {
 }
 .restaurant .card {
   position: relative;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 15px;
   margin: 10% auto;
   height: 70vmin;
   width: 90vmin;
   background: #fff;
   box-shadow: 6px 6px 20px -14px #353535;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 @media screen and (min-width: 650px) {
   .restaurant .card {

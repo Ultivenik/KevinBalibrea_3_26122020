@@ -102,14 +102,11 @@
     }
     .card{
         position: relative;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        border-radius: 15px;
         margin: 10% auto;
         @include adaptative-HW(70vmin, 90vmin);
         background: #fff;
         box-shadow: 6px 6px 20px -14px $dark-grey;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
         @include media-tablet{
             @include adaptative-HW(40vmin, 48%);
             margin: 2% auto;
