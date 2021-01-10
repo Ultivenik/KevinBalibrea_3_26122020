@@ -356,6 +356,8 @@ footer .links a {
 }
 .restaurant .card {
   position: relative;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   margin: 10% auto;
   height: 70vmin;
   width: 90vmin;

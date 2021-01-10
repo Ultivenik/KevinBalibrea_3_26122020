@@ -102,6 +102,8 @@
     }
     .card{
         position: relative;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
         margin: 10% auto;
         @include adaptative-HW(70vmin, 90vmin);
         background: #fff;
