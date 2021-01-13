@@ -79,6 +79,9 @@ header{
             a{
                 @extend %btn-links;
                 margin-top: 5%;
+                @include media-tablet{
+                    margin: 0;
+                }
             }
         }
     }
@@ -95,7 +98,7 @@ footer{
         @extend %logo;
         line-height: 3;
         @include media-desktop{
-            line-height: 10;
+            line-height: 5;
         }
     }
     .links{

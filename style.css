@@ -156,6 +156,11 @@ header .introduction .introduction-content p {
 header .introduction .introduction-content a {
   margin-top: 5%;
 }
+@media screen and (min-width: 650px) {
+  header .introduction .introduction-content a {
+    margin: 0;
+  }
+}
 
 footer {
   background: #353535;
@@ -176,7 +181,7 @@ footer h3 {
 }
 @media screen and (min-width: 1050px) {
   footer h3 {
-    line-height: 10;
+    line-height: 5;
   }
 }
 footer .links {
@@ -227,7 +232,7 @@ footer .links a {
 }
 @media screen and (min-width: 650px) {
   .summary {
-    padding: 3% 5% 0;
+    padding: 3% 5%;
   }
 }
 @media screen and (min-width: 1050px) {
@@ -342,6 +347,7 @@ footer .links a {
   .restaurant {
     display: flex;
     flex-wrap: wrap;
+    padding: 5%;
   }
 }
 @media screen and (min-width: 650px) {
@@ -512,7 +518,8 @@ footer .links a {
 }
 @media screen and (min-width: 1050px) {
   .menu a {
-    width: 50%;
+    width: 25%;
+    top: 17.5vmin;
   }
 }
 .menu i {

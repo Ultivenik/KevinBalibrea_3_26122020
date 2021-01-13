@@ -1,7 +1,7 @@
 .summary{
     padding: 8% 5%;
     @include media-tablet{
-        padding: 3% 5%  0;
+        padding: 3% 5%;
     }
     h2{
         @include media-desktop{
@@ -91,6 +91,7 @@
     @include media-tablet{
         display: flex;
         flex-wrap: wrap;
+        padding: 5%;
     }
     h2{
         @include media-tablet{
@@ -230,7 +231,8 @@
         position: relative;
         top:10vmin;
         @include media-desktop{
-            width: 50%;
+            width: 25%;
+            top:17.5vmin;
         }
     }
     i{
