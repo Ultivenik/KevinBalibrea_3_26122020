@@ -262,6 +262,7 @@ footer .links a {
   }
 }
 .summary .step {
+  cursor: pointer;
   background-color: #f7f7f7;
   font-weight: 500;
   height: 20vmin;

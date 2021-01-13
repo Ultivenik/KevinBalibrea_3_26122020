@@ -23,6 +23,7 @@
         }
     }
     .step{
+        cursor: pointer;
         background-color: lighten($light-grey, 5%);
         font-weight: 500;
         height: 20vmin;
