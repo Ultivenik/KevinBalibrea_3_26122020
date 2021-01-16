@@ -126,14 +126,14 @@ footer{
         }
     }
 }
-@keyframes loader{
+@include animation(loader){
     100%{
         opacity: 0;
         z-index: -100;
     }
 }
-@keyframes spinner{
+@include animation(spinner){
     100%{
         transform: rotate(360deg);
     }
-}
+} 
