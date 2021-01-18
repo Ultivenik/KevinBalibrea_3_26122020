@@ -158,10 +158,9 @@
             z-index: 100;
             cursor: pointer;
             font-weight: 100;
-           
             &:hover:before {
                 transition: all .8s ease-in-out;
-                -webkit-background-clip: text;
+                background-clip: text;
                 font-weight: 900;
                 background-image: linear-gradient($color-primary, $color-secondary);
                 -webkit-text-fill-color: transparent;
