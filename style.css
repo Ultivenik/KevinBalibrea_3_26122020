@@ -427,6 +427,14 @@ footer .links a {
   font-size: 1.6em;
   z-index: 100;
   cursor: pointer;
+  font-weight: 100;
+}
+.restaurant .card-legend i:hover:before {
+  transition: all 0.8s ease-in-out;
+  -webkit-background-clip: text;
+  font-weight: 900;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
 }
 @media screen and (min-width: 650px) {
   .restaurant .card-legend i {
@@ -438,11 +446,6 @@ footer .links a {
   .restaurant .card-legend i {
     right: 0;
   }
-}
-.restaurant .card-legend i:hover {
-  transition: all 0.5s ease-in-out;
-  color: #9356DC;
-  font-weight: 900;
 }
 
 .header-menu-img {
@@ -601,7 +604,7 @@ footer .links a {
   color: white;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-in;
   padding: 1px;
 }
 .menu .menu-item:hover .check {
@@ -610,7 +613,7 @@ footer .links a {
   transform: translateX(0);
 }
 .menu .menu-item:hover .check i {
-  transform: rotate(1turn);
+  transform: rotate(3turn);
   transition: all 0.7s ease;
 }
 .menu .menu-item .item-header {

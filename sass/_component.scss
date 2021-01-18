@@ -157,17 +157,21 @@
             font-size: 1.6em;
             z-index: 100;
             cursor: pointer;
+            font-weight: 100;
+           
+            &:hover:before {
+                transition: all .8s ease-in-out;
+                -webkit-background-clip: text;
+                font-weight: 900;
+                background-image: linear-gradient($color-primary, $color-secondary);
+                -webkit-text-fill-color: transparent;
+            }
             @include media-tablet{
                 left: 30vmin;
                 top: 0;
             }
             @include media-desktop{
                 right: 0;
-            }
-            &:hover{
-                transition: all .5s ease-in-out;
-                color:$color-primary;
-                font-weight: 900;
             }
         }
     }
@@ -283,7 +287,7 @@
             color: white;
             border-bottom-right-radius: 15px;
             border-top-right-radius: 15px;
-            transition: all .3s ease-out;
+            transition: all .5s ease-in;
             padding: 1px;
         }
         &:hover{
@@ -292,7 +296,7 @@
                 margin-left: 25px;
                 transform: translateX(0);
                 i{
-                    transform: rotate(1turn);
+                    transform: rotate(3turn);
                     transition: all .7s ease;
                 }
             }
